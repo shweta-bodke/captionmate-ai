@@ -15,7 +15,7 @@ function App() {
   try {
     setLoading(true);
 
-    const response = await fetch("http://localhost:5000/api/captions", {
+    const response = await fetch("https://captionmate-ai.onrender.com/api/captions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -56,7 +56,7 @@ function App() {
 
 const handleLoadHistory = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/captions");
+    const response = await fetch("https://captionmate-ai.onrender.com/api/captions");
 
     const data = await response.json();
 
